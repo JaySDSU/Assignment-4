@@ -1,0 +1,43 @@
+/* Generic Styles */
+/* body
+{margin: 0;} */
+main > *
+{background: silver;}
+
+main
+{
+    /*font-size: 15px;*/
+    font-family:  sans-serif;  
+    width: 960px;
+    min-height: 800px; 
+    margin: 20px auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 85px 2fr 1fr 50px;
+    grid-template-areas:
+    "logo . nav nav"
+    "head head head head"
+    "pro1 pro1 pro2 pro2"
+    "foot foot foot foot";
+    grid-gap: 20px;
+}
+
+header     {grid-area:logo;}
+nav        {grid-area:nav; align-self: center; }
+.image     {grid-area:head; }
+.product1  {grid-area:pro1; }
+.product2  {grid-area:pro2; }
+footer     {grid-area:foot;text-align: center; align-content: center;}
+
+nav ul {
+    list-style-type: none;
+    display: grid;
+    padding: 0;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: 20px;
+    grid-gap: 20px;
+    justify-items: center;
+    align-content: center;
+    height: 20px;
+}
+ul li a  {text-decoration: none; color: #000;}
